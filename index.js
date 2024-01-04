@@ -87,15 +87,15 @@ var finances = [
   ['Feb-2017', 671099],
 ];
 
-var averageChangeList = [
-  0
-];
-
+var averageChangeList = [];
 var totalNumberOfMonths= finances.length
 var netProfitLoss = 0
 var averageCount = 0
 var greatestIncrease = 0
 var greatestDecrease = 0
+var dateGreatestIncrease;
+var dateGreatestDecrease;
+
 console.log('Financial Analysis')
 console.log('----------------')
 console.log ('Total Months: ' + totalNumberOfMonths)
@@ -111,13 +111,18 @@ for (let index = 0; index < finances.length; index++)
  netProfitLoss+=profitLoss
  if(index >= 1 ){
   //subtract the current month's number with the previous month's
-  var change = finances[index-1][1] - finances[index][1];
-  
+  var change = finances[index][1] - finances[index -1][1];
+  if (change > greatestIncrease) {
+    greatestIncrease = change
+    dateGreatestIncrease = finances[index][0] 
+  }
+  if (change < greatestDecrease){
+    greatestDecrease = change
+    dateGreatestDecrease = finances[index][0]
+  }
   averageChangeList.push(change);
-
  }
 }
-
 console.log ('Total: $' + netProfitLoss)
 
 for(let index = 0; index < averageChangeList.length; index++)
@@ -125,7 +130,7 @@ for(let index = 0; index < averageChangeList.length; index++)
   const average = averageChangeList[index];
   averageCount+=average
 }
-
-console.log('Average Change: -' + (averageCount/(finances.length-1)).toFixed(2))
-
-
+console.log(averageCount);
+console.log('Average Change:' + (averageCount/(finances.length-1)).toFixed(2))
+console.log('dateGreatestIncrease' + (greatestIncrease, dateGreatestIncrease));
+console.log('Greatest Decrease' + (greatestDecrease, dateGreatestDecrease) );
