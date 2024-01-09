@@ -23,8 +23,10 @@ The task required to proof the below statements which it has been done:
 
 As the name of the project says, this exercise could be use to do a follow up of the yearly finances and application can vary and be adapted to different set ups in the finance department, for instance to track the particular high or low season of productivity of a particular business, etc. 
 
-Piblished website:
+Published website:
 https://mafer74.github.io/Console-Finances/
+
+
 
 
 ```md
