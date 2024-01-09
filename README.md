@@ -19,15 +19,11 @@ The task required to proof the below statements which it has been done:
 
 As the name of the project says, this exercise could be use to do a follow up of the yearly finances and application can vary and be adapted to different set ups in the finance department, for instance to track the particular high or low season of productivity of a particular business, etc. 
 
+Published website: https://mafer74.github.io/Console-Finances/
 
 
-To add a screenshot, create an `assets/images` folder in your repository and upload your screenshot to it. Then, using the relative filepath, add it to your README using the following syntax:
+![alt text](screenshot.png)
 
-
-```md
-![alt text](github.com/MaFer74/Console-Finances/blob/main/Images)
-
-```
 Because of the type of challenge, this particular project does not require a table of contents neither a further description, as it self explanatory
 
 
